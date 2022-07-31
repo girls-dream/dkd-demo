@@ -4,7 +4,7 @@
     <div class="form">
       <!-- 帝可得图片 -->
       <div>
-        <img src="../../assets/logo.595745bd.png" alt="" />
+        <img class="logo" src="../../assets/logo.595745bd.png" alt="" />
       </div>
       <!-- 表单框盒子 -->
       <div class="formSon">
@@ -19,12 +19,14 @@
             <el-input
               placeholder="请输入密码"
               prefix-icon="el-icon-lock"
+              suffix-icon="iconfont icon-yanjing"
             ></el-input> </el-form-item
           ><el-form-item>
             <el-input
               placeholder="请输入验证码"
               prefix-icon="el-icon-price-tag"
             ></el-input>
+            <img class="CAPTCHA" src="../../assets/2EB9ORVshCyds3l7C78KrTc6CqEgHJ4N.jpeg" alt="">
           </el-form-item>
           <el-form-item>
             <el-button type="primary">登录</el-button>
@@ -85,12 +87,16 @@ export default {
   background: #fff;
   border-radius: 10px;
 }
-img {
+.logo {
   width: 96px;
   height: 96px;
   position: relative;
   top: -45px;
   left: 210px;
+}
+.CAPTCHA{
+  width: 130px;
+  height: 50px;
 }
 .formSon {
   // background-color: pink;
@@ -104,12 +110,12 @@ input {
   
 }
 .el-input__inner{
-height:47px;
+height:50px;
 }
-.el-input{
-  // border:1px solid #e2e2e2
+// .el-input{
+//   // border:1px solid #e2e2e2
 
-}
+// }
 .el-icon-mobile-phone:before {
   position: relative;
   top: 0;
@@ -123,5 +129,8 @@ button {
   opacity: 0.91;
   border-radius: 8px;
   color: #fff;
+}
+.el-form-item__content{
+  display: flex;
 }
 </style>
